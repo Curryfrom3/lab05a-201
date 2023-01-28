@@ -54,9 +54,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   let sumValue1 = sum(a, b);
+  // sum is calling the function from the first prolem
   let sumValue = sumValue1[0];
+  // sumValue1 is an array and I only want the first answer in it and thats [0]
   let sumValue2 = sum(sumValue,c);
+  // take the sum a + b and sumvalue - only the first answer of sum + c
   let sumValue3 = sumValue2[0];
+  // sumvalue2 but only the first answer [0]
 
   let product1 = multiply(a, b);
   let product = product1[0];
@@ -88,11 +92,20 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+  let sum1 = sum(testArray[0], testArray[1])[0];
+  console.log(sum1);
+  let sum2 = sum(sum1, testArray[2])[0];
+  console.log(sum2);
+  let message = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum2} is their sum.`;
+  return[sum2,message];
+
 }
+
+sumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -108,6 +121,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  
+
+
 
 }
 
