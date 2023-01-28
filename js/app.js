@@ -54,7 +54,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   let sumValue1 = sum(a, b);
-  // sum is calling the function from the first prolem
+  // sum is calling the function from the first problem
   let sumValue = sumValue1[0];
   // sumValue1 is an array and I only want the first answer in it and thats [0]
   let sumValue2 = sum(sumValue,c);
@@ -93,9 +93,10 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
 
   let sum1 = sum(testArray[0], testArray[1])[0];
-  console.log(sum1);
+  //console.log(sum1);
+  // sum is pulling the first function testarray is the value above this function containing the array [0] is the first number in the array [1] is the second and the [0] is the first value of that.
   let sum2 = sum(sum1, testArray[2])[0];
-  console.log(sum2);
+  //console.log(sum2);
   let message = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum2} is their sum.`;
   return[sum2,message];
 
@@ -121,14 +122,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  
+  let product1 = multiply(testArray[0], testArray[1])[0];
+  let product2 = multiply(product1, testArray[2])[0];
+  let message = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${product2}.`;
+  return[product2,message];
 
 
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
